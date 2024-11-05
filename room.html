@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris chat</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="room.css">
+
+</head>
+<body>
+    <div id="room">
+        <h3 class="text-center text-black pt-5">room form</h3>
+        <div class="container">
+            <div id="room-row" class="row justify-content-center align-items-center">
+                <div id="room-column" class="col-md-6">
+                    <div id="room-box" class="col-md-12">
+                        <form id="room-form" class="form" action="" method="post">
+                            <h3 class="text-center text-info">Join room</h3>
+                            <div class="form-group">
+                                <label for="room_name" class="text-info">Room name:</label><br>
+                                <input type="text" name="room_name" id="room_name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let form = document.getElementById("room-form")
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        let inviteCode = e.target.room_name.value
+        window.location = `index.html?room=${inviteCode}`
+    })
+</script>
+
+</html>

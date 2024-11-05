@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Chat</title>
+
+    <link rel="stylesheet" href="main.css" media="screen" type="text/css">
+</head>
+<body>
+    
+    <div id="videos">
+        <video class="video-play" id="user-1" autoplay playsinline></video>
+        <video class="video-play" id="user-2" autoplay playsinline></video>
+    </div>
+
+    <div id="controls">
+        <div class="control-container" id="camera-btn">
+            <img src="images/video.png" />
+        </div>
+        <div class="control-container" id="mic-btn">
+            <img src="images/sound.png" />
+        </div>
+        <a href="room.html">
+            <div class="control-container" id="leave-btn">
+                <img src="images/phone.png" />
+            </div>
+        </a>
+        
+    </div>
+
+    <script src="agora-rtm-sdk-1.5.1.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
